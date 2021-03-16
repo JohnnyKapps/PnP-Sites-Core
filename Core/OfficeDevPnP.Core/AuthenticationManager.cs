@@ -1113,7 +1113,7 @@ namespace OfficeDevPnP.Core
                 X509KeyStorageFlags.Exportable |
                 X509KeyStorageFlags.MachineKeySet |
                 X509KeyStorageFlags.PersistKeySet);
-
+            certfile.Close();
             return GetAzureADAppOnlyAuthenticatedContext(siteUrl, clientId, tenant, cert, environment);
         }
 
